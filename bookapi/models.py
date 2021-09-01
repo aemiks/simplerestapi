@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-from datetime import datetime as dt
 
-# Create your models here.
 
 class Book(models.Model):
     title = models.CharField(max_length=250)
@@ -18,12 +16,7 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-    ## Text field format to get year ##
-    #def published_date_format(self):
-    #    if len(self.published_date) > 5:
-    #        converted_date = dt.strptime(self.published_date, "%Y-%m-%d")
-    #        self.published_year = converted_date.year
-    #    else:
-    #        converted_date = dt.strptime(self.published_date, "%Y")
-    #        self.published_year = converted_date.year
-    #    return self.published_year
+class db(models.Model):
+    key = models.CharField(max_length=1)
+
+
